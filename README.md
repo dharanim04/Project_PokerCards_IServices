@@ -1,8 +1,8 @@
 # Project_PokerCards
-#Prerequisites
+## Prerequisites
 .Net Framework 4.5 or above
 
-# Build and Run
+## Build and Run
 Download the code files and open the solution *.sln file in Visual Studio 2019. C# .NETCore console application has been used for this project.
 
 Build the solution and run Project_PokerCards.exe from command prompt passing the input text file's path 
@@ -11,7 +11,7 @@ Once the build succeeded redirect to project folder and find "Data/poker-hands.t
 
 Run "Poker_Hand_Sorter" application and then the output will be shown on the command line
 
-# Unit Test Cases
+## Unit Test Cases
 Have used Nunit test cases
 
 TestCases
