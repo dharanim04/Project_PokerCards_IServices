@@ -12,7 +12,7 @@ namespace Project_PokerCards.Data
            
 
             
-            FilePath = "C:\\Users\\deepa\\Downloads\\poker-hands.txt";
+            FilePath = "C:\\TestData\\poker-hands.txt";
                 // fileDic + "Data\\poker-hands.txt";
             Console.WriteLine(FilePath);
         }
