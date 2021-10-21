@@ -16,6 +16,11 @@ namespace Project_PokerCards
 
         int _playerWin_1;
         int _playerWin_2;
+        /// <summary>
+        /// returns count of each players
+        /// </summary>
+        /// <param name="filePath">inputs filepath</param>
+        /// <returns>return two integer values of each player </returns>
         public (int, int) PlayersResult(string filePath)
         {
             _filepath = filePath;
@@ -28,10 +33,12 @@ namespace Project_PokerCards
                 {
                     List<string> player1 = line.Split(' ').Take(5).ToList();
                     List<string> player2 = line.Split(' ').Skip(5).Take(5).ToList();
-
+                    
+                    //extracting Card suits
                     List<string> playerSuit_1 = player1.Select(x => { return x[1].ToString(); }).ToList();
                     List<string> playerSuit_2 = player2.Select(x => { return x[1].ToString(); }).ToList();
 
+                    //extracting card values
                     List<int> playerValues_1 = player1.Select(x => { return Card.CardValue(x[0].ToString()); }).ToList();
                     List<int> playerValues_2 = player2.Select(x => { return Card.CardValue(x[0].ToString()); }).ToList();
 
@@ -55,17 +62,12 @@ namespace Project_PokerCards
                         }
                     }
                 }
-
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-           
-
             return (_playerWin_1, _playerWin_2);
-             
         }
-
     }
 }

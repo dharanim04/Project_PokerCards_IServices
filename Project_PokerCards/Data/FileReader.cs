@@ -3,24 +3,21 @@ using System.IO;
 
 namespace Project_PokerCards.Data
 {
-   public class FileReader
+    public class FileReader
     {
         public string FilePath { get; set; }
         public FileReader()
         {
             //string fileDic = Directory.GetCurrentDirectory().Replace("bin\\Debug\\netcoreapp3.1", "");
-           
-
-            
             FilePath = "C:\\TestData\\poker-hands.txt";
-                // fileDic + "Data\\poker-hands.txt";
-            Console.WriteLine(FilePath);
+            // fileDic + "Data\\poker-hands.txt";
+            Console.WriteLine("Input File path: "+FilePath);
         }
 
         /// <summary>
         /// Reads Input from the file using the file path given in arguments
         /// </summary>
-        /// <returns></returns>
+        /// <returns>bool value</returns>
         public bool IfExists()
         {
             try
@@ -33,21 +30,24 @@ namespace Project_PokerCards.Data
                 {
                     Console.WriteLine("File does not exist in the current directory!");
                 }
+
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("File could not open with this format." + e.Message);
+                return false;
+            }
+            catch(FileNotFoundException ex)
+            {
+                Console.WriteLine("File could not be found on the specified path."+ex.Message);
+                return false;
             }
             catch (Exception ex)
             {
-                if (ex is FileNotFoundException)
-                {
-                    throw new Exception("File could not be found on the specified path.");
-                }
-                else
-                {
-                    throw new Exception("Error occured in reading data from the file. Please ensure the format is correct and as expected.");
-                }
-
+                Console.WriteLine("Error occured in reading data from the file. Please ensure the format is correct and as expected."+ex.Message);
+                return false;
             }
             return true;
-            
         }
     }
 }

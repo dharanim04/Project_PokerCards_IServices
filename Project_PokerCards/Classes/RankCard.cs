@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Project_PokerCards.Classes
 {
-    class RankCard: CompareClass
+    class RankCard : CompareClass
     {
         public int GetRank(List<string> playerSuit, List<int> playerValues)
         {

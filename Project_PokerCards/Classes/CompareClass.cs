@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Project_PokerCards.Classes
 {
-  public  class CompareClass
+    public class CompareClass
     {
-        public  int TieBreak(int rank, List<int> playerValues_1, List<int> playerValues_2)
+        public int TieBreak(int rank, List<int> playerValues_1, List<int> playerValues_2)
         {
             switch (rank)
             {
@@ -75,7 +75,7 @@ namespace Project_PokerCards.Classes
             return 0;
         }
         //checking pair
-        public  int CheckForPairs(List<int> playerValues_1, List<int> playerValues_2)
+        public int CheckForPairs(List<int> playerValues_1, List<int> playerValues_2)
         {
             int duplicatePlayer1 = playerValues_1.GroupBy(x => x).SelectMany(grp => grp.Skip(1)).FirstOrDefault();
             int duplicatePlayer2 = playerValues_2.GroupBy(x => x).SelectMany(grp => grp.Skip(1)).FirstOrDefault();
@@ -90,7 +90,7 @@ namespace Project_PokerCards.Classes
             }
         }
         //Checking for highest card
-        public  int CheckForHighCard(List<int> playerValues_1, List<int> playerValues_2)
+        public int CheckForHighCard(List<int> playerValues_1, List<int> playerValues_2)
         {
             int len = playerValues_1.Count();
             playerValues_1.Sort();
@@ -106,12 +106,12 @@ namespace Project_PokerCards.Classes
             return 0;
         }
         //checking for consecutive
-        public  bool IsConsecutive(List<int> playerValues)
+        public bool IsConsecutive(List<int> playerValues)
         {
             return (playerValues.Distinct().Count() == 5 && (playerValues.Max() - playerValues.Min() + 1) == 5);
         }
         //checking for same suit
-        public  bool IsSameSuit(List<string> playerSuit)
+        public bool IsSameSuit(List<string> playerSuit)
         {
             return !playerSuit.Any(o => o != playerSuit[0]);
         }
