@@ -7,11 +7,11 @@ Download the code files and open the solution *.sln file in Visual Studio 2019.
 
 C# .NETCore console application has been used for this project.
 
-Build the solution and run project by providing input file.
+Redirect to project folder and find "Data/poker-hands.txt"file and past file inside the "C:\TestData\poker-hands.txt" or change path in Data/FileReader.cs file. 
 
-Once the build succeeded redirect to project folder and find "Data/poker-hands.txt"file and past file inside the "C:\TestData\poker-hands.txt"
+Fails and displays error message if file doesn't exists.
 
-Run "Poker_Hand_Sorter" application and then the output will be shown on the command line
+Build the solution and run project. 
 
 ## Unit Test Cases
 Have used Nunit test cases
