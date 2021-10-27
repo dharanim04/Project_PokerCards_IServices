@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using Project_PokerCards;
-using Project_PokerCards.Data;
+using Project_PokerCards.Application;
+using Project_PokerCards.DataAccess;
 
 namespace TestPokerCards
 {

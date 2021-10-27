@@ -1,15 +1,18 @@
-﻿using Project_PokerCards.Classes;
-using Project_PokerCards.Data;
+﻿using Project_PokerCards.Model;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
 using System.Linq;
 
-namespace Project_PokerCards
+namespace Project_PokerCards.Application
 {
-    public class PokerGame
+    public interface IPokerGame
     {
+        public (int, int) PlayersResult(string filePath);
+    }
+    public class PokerGame : IPokerGame
+    {
+    
         //instaniate cards class
         RankCard rankClas = new RankCard();
         string _filepath;
@@ -33,7 +36,7 @@ namespace Project_PokerCards
                 {
                     List<string> player1 = line.Split(' ').Take(5).ToList();
                     List<string> player2 = line.Split(' ').Skip(5).Take(5).ToList();
-                    
+
                     //extracting Card suits
                     List<string> playerSuit_1 = player1.Select(x => { return x[1].ToString(); }).ToList();
                     List<string> playerSuit_2 = player2.Select(x => { return x[1].ToString(); }).ToList();

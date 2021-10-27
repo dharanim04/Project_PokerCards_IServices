@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Project_PokerCards.Classes
+namespace Project_PokerCards.Model
 {
-    class RankCard : CompareClass
+   public class RankCard : CompareClass
     {
         public int GetRank(List<string> playerSuit, List<int> playerValues)
         {

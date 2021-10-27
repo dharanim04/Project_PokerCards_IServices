@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Project_PokerCards.Classes
+namespace Project_PokerCards.Model
 {
     public class CompareClass
     {

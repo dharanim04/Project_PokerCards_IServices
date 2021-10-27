@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project_PokerCards.Classes
+namespace Project_PokerCards.Model
 {
     class Card
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Project_PokerCards.Data
+namespace Project_PokerCards.DataAccess
 {
     public class FileReader
     {
