@@ -1,4 +1,5 @@
 ﻿using Project_PokerCards.Model;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +13,12 @@ namespace Project_PokerCards.Application
     }
     public class PokerGame : IPokerGame
     {
-    
+        //logging
+        //private readonly ILogger<PokerGame> _logger;
+        //public PokerGame(ILoggerFactory loggerFactory)
+        //{
+        //    _logger = loggerFactory.CreateLogger<PokerGame>();
+        //}
         //instaniate cards class
         RankCard rankClas = new RankCard();
         string _filepath;
